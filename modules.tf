@@ -31,7 +31,9 @@ module "dns_record" {
   network_dns_zone_rg   = var.network_dns_zone_rg
   network_dns_zone_name = var.network_dns_zone_name
   network_dns_record    = var.network_dns_record
-  network_publicip_id   = var.network_publicip_id
+  network_publicip_id   = module.dns_public_ip.out_public_ip_id
+
+  depends_on = [ module.dns_public_ip ]
 
 }
 
