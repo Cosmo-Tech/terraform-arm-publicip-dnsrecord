@@ -8,15 +8,10 @@ locals {
   }
 }
 
-resource "azurerm_resource_group" "public_ip_rg" {
-  name     = var.publicip_resource_group
-  location = var.location
-}
-
 # Public IP
 resource "azurerm_public_ip" "publicip" {
   name                = substr("CosmoTech-${var.project_customer_name}-${var.project_name}-${var.project_stage}-PublicIP", 0, 80)
-  resource_group_name = azurerm_resource_group.public_ip_rg.name
+  resource_group_name = var.publicip_resource_group
   location            = var.location
   allocation_method   = "Static"
   sku                 = "Standard"
