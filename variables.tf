@@ -44,6 +44,3 @@ variable "network_dns_zone_name" {
 variable "network_dns_zone_rg" {
   type = string
 }
-variable "network_publicip_id" {
-  type = string
-}
