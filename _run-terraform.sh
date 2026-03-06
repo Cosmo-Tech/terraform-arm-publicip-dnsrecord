@@ -16,6 +16,6 @@ done
 
 
 # Deploy
-./_run-init.sh  devops-core-ip-0001
+./_run-init.sh  devops-test-core-ip-0001
 ./_run-plan.sh  terraform.tfvars
 ./_run-apply.sh 

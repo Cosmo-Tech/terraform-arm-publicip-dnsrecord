@@ -10,7 +10,7 @@ project_name          = "test"
 project_stage         = "Dev"
 
 # dns
-network_dns_record = "devops-mtor"
+network_dns_record = "devops"
 
-# public ip
-publicip_resource_group = "devops-mtor-rg"
+# Public ip
+publicip_resource_group = "rg-devops"
